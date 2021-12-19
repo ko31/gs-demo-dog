@@ -22,6 +22,14 @@ class Api {
 		add_shortcode( 'gs-dogs', [ $this, 'output' ] );
 	}
 
+	/**
+	 * Request API.
+	 *
+	 * @param $breed
+	 * @param $count
+	 *
+	 * @return |null
+	 */
 	public function request( $breed, $count ) {
 		$url = sprintf( '%s%s/images/random/%s', $this->endpoint_breed, $breed, $count );
 
