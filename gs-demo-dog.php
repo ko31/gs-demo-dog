@@ -17,3 +17,9 @@ namespace Gs_Demo_Dog;
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
+
+require dirname( __FILE__ ) . '/src/class-api.php';
+
+add_action( 'plugins_loaded', function () {
+	new Api();
+} );
